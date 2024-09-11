@@ -1,5 +1,5 @@
-  
-  fail_fast: true
+
+fail_fast: true
 default_stages: [commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -30,6 +30,4 @@ repos:
       - id: terraform_validate
         exclude: "examples/"
       - id: terraform_docs
-  
-  
 
