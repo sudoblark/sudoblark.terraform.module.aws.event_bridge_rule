@@ -86,7 +86,7 @@ locals {
       targets = [
         {
           name : "SNSTopic"
-          arn : "arn:aws:sns::${data.aws_region.current_region.name}:${data.aws_caller_identity.current_account.account_id}:etl-alert-topic"
+          arn : "arn:aws:sns:${data.aws_region.current_region.name}:${data.aws_caller_identity.current_account.account_id}:etl-alert-topic"
         }
       ]
     },
