@@ -117,7 +117,7 @@ EOT
         for target in rule.targets : alltrue([
           !(
             can(regex("arn:aws:states", target.arn)) &&
-            rule.iam_policy_statements == [] &&
+            length(rule.iam_policy_statements) == 0 &&
             rule.iam_role_suffix == ""
           )
         ])
@@ -135,7 +135,7 @@ EOT
         for target in rule.targets : alltrue([
           !(
             can(regex("arn:aws:ec2", target.arn)) &&
-            rule.iam_policy_statements == [] &&
+            length(rule.iam_policy_statements) == 0 &&
             rule.iam_role_suffix == ""
           )
         ])
@@ -154,7 +154,7 @@ EOT
         for target in rule.targets : alltrue([
           !(
             can(regex("arn:aws:kinesis:*:*:stream", target.arn)) &&
-            rule.iam_policy_statements == [] &&
+            length(rule.iam_policy_statements) == 0 &&
             rule.iam_role_suffix == ""
           )
         ])
@@ -173,7 +173,7 @@ EOT
         for target in rule.targets : alltrue([
           !(
             can(regex("arn:aws:events", target.arn)) &&
-            rule.iam_policy_statements == [] &&
+            length(rule.iam_policy_statements) == 0 &&
             rule.iam_role_suffix == ""
           )
         ])

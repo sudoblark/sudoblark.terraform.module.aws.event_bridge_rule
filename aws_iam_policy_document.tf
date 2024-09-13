@@ -1,6 +1,6 @@
 locals {
   actual_iam_policy_documents = {
-    for rule in var.raw_event_bridge_rules : rule.iam_policy_statements == [] ? null :
+    for rule in var.raw_event_bridge_rules : length(rule.iam_policy_statements) == 0 ? null :
     rule.suffix => {
       statements = rule.iam_policy_statements
     }

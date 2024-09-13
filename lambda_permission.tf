@@ -7,7 +7,7 @@ locals {
         rule_arn : module.rule[rule.suffix].arn,
         event_bridge_rule_suffix : rule.suffix
       }
-    ] if rule.targets != []
+    ] if length(rule.targets) > 0
     ]) : rule.index => rule
   }
 }

@@ -5,7 +5,7 @@ locals {
         policy_name_suffix = rule.suffix
         policy_content     = data.aws_iam_policy_document.event_bridge_target_policy[rule.suffix].json
       }
-    ] if rule.iam_policy_statements != []
+    ] if length(rule.iam_policy_statements) > 0
   ]) : policy.policy_name_suffix => policy }
 }
 

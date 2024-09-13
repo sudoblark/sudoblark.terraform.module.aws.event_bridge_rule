@@ -8,7 +8,7 @@ locals {
         policy_arn         = aws_iam_policy.invoke_policy[rule.suffix].arn
 
       }
-    ] if rule.iam_policy_statements != []
+    ] if length(rule.iam_policy_statements) > 0
   ]) : policy.index => policy }
 }
 
