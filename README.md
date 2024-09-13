@@ -44,7 +44,10 @@ the module itself, and the [examples](#examples) section which has examples of h
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.5.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.63.0 |
 
 ## Providers
 
