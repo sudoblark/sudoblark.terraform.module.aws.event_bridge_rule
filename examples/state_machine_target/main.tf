@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.27.0"
+      version = ">= 5.61.0"
     }
   }
   required_version = "~> 1.5.0"
@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "event_bridge" {
-  source = "github.com/sudoblark/sudoblark.terraform.module.aws.event_bridge_rule?ref=1.0.0"
+  source = "github.com/sudoblark/sudoblark.terraform.module.aws.event_bridge_rule?ref=1.0.1"
 
   application_name       = var.application_name
   environment            = var.environment
